@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="img/flowers.png" type="image/x-icon">
+        <title>Maaf ya, Ayang!</title>
+        <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background: linear-gradient(135deg, rgb(0, 0, 0), rgb(46, 13, 39), rgb(0, 0, 0));
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+      }
+      h1 {
+        margin: 20px 0;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      .image-container {
+        border-radius: 20px;
+        border: 3px solid #fff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+        overflow: hidden;
+        width: 300px;
+        height: 480px;
+      }
+      .image-container img {
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .buttons {
+        display: flex;
+        gap: 20px;
+      }
+      button {
+        padding: 15px 30px;
+        font-size: 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      #btn_mau {
+        background-color: #28a745;
+        color: #fff;
+      }
+      #btn_mau:hover {
+        background-color: #218838;
+        transform: scale(1.1);
+      }
+      #btn_gamau {
+        background-color: #f80019;
+        color: #fff;
+      }
+      #btn_gamau:hover {
+        background-color: #ff0019;
+        transform: scale(1.1);
+      }
+    </style>
+    </head>
+    <body>
+        <h1>Maafin Yaa Cuman Bisa Ngasih Bunga Virtual Ajaa wkwk :)</h1>
+        <h6>Bunga Aslinya Nanti Yaa Janji Kok ✌️</h6>
+        <div class="image-container">
+            <img
+                src="https://media.giphy.com/media/XYEEvoX0Ub69ZgN9ai/giphy.gif"
+                alt="Funny GIF" />
+        </div>
+        <h1>Maafin Aseep Yang Cakep Ini Yaaa</h1>
+        <div class="buttons">
+            <button id="btn_mau"
+                onclick="alert('Makasih yaa udah di maafin mwaahh :D')">Iya</button>
+            <button id="btn_gamau" onclick="gamau(this)">Ga</button>
+        </div>
+
+        <script>
+       function gamau(id) {
+        const maxWidth = window.innerWidth - id.offsetWidth;
+        const maxHeight = window.innerHeight - id.offsetHeight;
+        const i = Math.floor(Math.random() * maxWidth);
+        const j = Math.floor(Math.random() * maxHeight);
+        id.style.position = 'absolute';
+        id.style.left = i + 'px';
+        id.style.top = j + 'px';
+      }
+    </script>
+    </body>
+</html>
